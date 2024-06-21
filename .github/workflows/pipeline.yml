@@ -31,3 +31,4 @@ jobs:
         release_name: Release ${{ github.sha }}
         draft: false
         prerelease: false
+        distribution: 'public'  # Provide the required input 'distribution'
