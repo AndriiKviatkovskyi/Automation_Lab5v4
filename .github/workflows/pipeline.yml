@@ -39,7 +39,7 @@ jobs:
                   <server>
                     <id>github</id>
                     <username>${{ github.actor }}</username>
-                    <password>${{ secrets.Maven }}</password>
+                    <password>${{ secrets.GITHUB_TOKEN }}</password>
                   </server>
                 </servers>
               </settings>" > ~/.m2/settings.xml
@@ -57,5 +57,5 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
-          DEFAULT_BRANCH: main  # Ensure this matches your main branch
-          GITHUB_TOKEN: ${{ secrets.Maven }}
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
