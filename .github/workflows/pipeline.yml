@@ -1,4 +1,4 @@
-name: Lab5
+name: AutomationLab5
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
     - name: Publish JAR Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: Lab5-CI
+        name: Lab5-Package
         path: target/*.jar
 
     - name: Configure Maven for GitHub Packages
